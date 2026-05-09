@@ -76,20 +76,6 @@ export const loginUser = async (req, res) => {
     // GENERATE TOKEN
    generateToken(user , 201 , "login successfully" , res);
 
-    // // REMOVE PASSWORD
-    // const userData = {
-    //   _id: user._id,
-    //   name: user.name,
-    //   email: user.email,
-    // };
-
-    // // SEND RESPONSE
-    // return res.status(200).json({
-    //   success: true,
-    //   message: "Login successful",
-    //   token,
-    //   user: userData,
-    // });
   } catch (error) {
     console.log("LOGIN ERROR:", error);
 
