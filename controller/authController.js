@@ -60,7 +60,8 @@ export const loginUser = async (req, res) => {
     if (!user) {
       return res.status(404).json({
         success: false,
-        message: "Invalid email or password",
+        message: " User not found , plrase register first ",
+        redirect : true
       });
     }
 

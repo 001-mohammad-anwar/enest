@@ -12,11 +12,16 @@ import taskRoutes from "./router/task.route.js"
 
 const app = express();
 
-app.use(cors({
-   origin: [process.env.FRONTEND_URL],
-   methods: ["GET", "POST", "PUT", "DELETE"],
-   credentials: true,
-}));
+app.use(
+  cors({
+    origin: [
+      process.env.FRONTEND_URL,
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 app.use(express.json())
