@@ -22,6 +22,16 @@ app.use(
     credentials: true,
   })
 );
+app.get("/ping", (req,res) => {
+  try {
+      res.status(200).json({
+        message: "Server is awake"
+      })
+  } catch (error) {
+    console.log("error from ping", error)
+  }
+})
+
 
 app.use(cookieParser());
 app.use(express.json())
